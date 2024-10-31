@@ -1,0 +1,151 @@
+:root {
+    --text-color: #000000b2;
+    --body: #E6E6FA;
+    --hover: #e8919d;
+    --inicio-fim: #ffcccc;
+    --color-00: #ff859f;
+    --color-01: #ffff;
+    --color-02: #e8919d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: var(--body);
+    color: var(--text-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.card {
+    background-color: var(--color-00);
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px var(--color-00);
+    width: 400px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.label-float input{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid var(--text-color);
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+  
+.label-float input:focus{
+    border-bottom: 2px solid var(--inicio-fim);
+}
+
+.label-float label{
+    color: var(--text-color);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+  
+.label-float input:focus + label,
+.label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+button{
+    background-color: var(--inicio-fim);
+    color: var(--text-color);
+    padding: 8px 0 8px 15px;
+    width: 100%;
+    border: none;
+    font-size: 15pt;
+    margin-top: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+  
+hr{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+}
+  
+p{
+    color: var(--text-color);
+    font-size: 14pt;
+    text-align: center;
+}
+  
+a{
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+  
+a:hover{
+    color: var(--inicio-fim);
+}
+  
+.fa-eye{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--text-color      );
+}
+  
+   #msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+  }

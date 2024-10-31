@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POEMAS DE GIGI</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a>
+        <div class="logo-img">
+          <img src="assets/img/logo.jpeg" />
+        </div>
+      </a>
+
+      <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#books">Livros</a>
+        <a href="#contact">Contato</a>
+        <a href="assets/pages/cadastro.html">Cadastrar</a>
+        <a href="assets/pages/login.html">Login</a>
+      </div>
+
+      <div class="nav-responsive">
+        <a href="#home">Home</a>
+        <a href="#books">Livros</a>
+        <a href="#contact">Contato</a>
+        <a href="assets/pages/cadastro.html">Cadastrar</a>
+        <a href="assets/pages/login.html">Login</a>
+      </div>
+
+      <div class="menu-hamburguer">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </header>
+
+     <!--HOME SECTION-->
+     <section class="home" id="home">
+      <div class="home-container">
+        <h1>Bem vindo(a)!</h1>
+        <p>
+          Aqui você poderá encontrar um livro com poemas que escrevi para: minha
+          primeira paixão, minha obcessão por uma amiga e para meu "quase algo".
+        </p>
+        <h3>Também poderá pedir um poema específico!!</h3>
+        <p>
+          É só entrar em contato e falar um pouco sobre a história para ter
+          uma base no que escrever para você.
+        </p>
+      </div>
+    </section>
+
+    <!--BOOKS SECTION-->
+    <section class="books" id="books">
+      <h2><span>Livros</span></h2>
+      <div class="books-container">
+        <!-- Produto 1 -->
+        <div class="books-box">
+          <img src="assets/img/capa (1).jpg" alt="capa-1" />
+          <h3>Poemas de Gigi - Os amores</h3>
+          <p>
+            "Poemas de Gigi - Os amores" é uma coleção de poemas escritos por       
+            Giovanna Marchesin. A obra aborda temas de amor, paixão, e emoções
+            intensas, especialmente relacionadas a experiências pessoais
+            sentimentos por uma pessoa específica. Os poemas exploram as nuances
+            do amor, desde o surgimento de sentimentos até as dificuldades de
+            lidar com um amor não correspondido, ou com amizades que se
+            transformam em algo mais.
+          </p>
+          <p class="preco">R$ 20,00</p>
+          <a href="assets/pages/login1.html">
+            <button class="comprar-btn">Comprar</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--CONTATO SECTION-->
+    <section class="contact" id="contact">
+      <h2>Contate<span>Me!</span></h2>
+
+      <form id="contact-form">
+        <div class="input-box">
+          <input type="text" id="name" placeholder="Seu nome" required/>
+          <input type="email" id="email" placeholder="E-mail" required/>
+        </div>
+
+        <div class="input-box">
+          <input type="tel" id="phone" placeholder="Telefone" required/>
+          <input type="text" id="tema" placeholder="Tema do poema" required/>
+        </div>
+
+        <textarea
+          cols="30"
+          rows="10"
+          id="historia"
+          placeholder="Conte um pouco sobre a história..."
+          required></textarea>
+
+        <p>
+            Irei entrar em contato até 1 dia útil para informar o preço e confirmar o pedido!
+        </p>
+
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+      ></script>
+      <script type="text/javascript">
+        (function () {
+          emailjs.init("h0APax4EhGv-0blgo"); 
+        })();
+      </script>
+    </section>
+
+    <footer>
+      <div class="container">
+        <!-- ul - 1-->
+        <ul>
+          <h3>Poemas de Gigi</h3>
+          <p>
+            Escrevo poemas para libertar de uns sentimentos, amor é um deles.
+          </p>
+        </ul> 
+        <!-- ul - 2-->
+          <div class="social-media">
+            <h3>Redes sociais</h3>
+            <p>
+              <a
+              href="https://www.instagram.com/gigi_poemas/"
+              aria-label="insta"
+              target="_blank">
+              <i class="bx bxl-instagram"></i>
+            </a>
+          <a
+          href="https://www.instagram.com/gigi_poemas/"
+          aria-label="twitter"
+          target="_blank">
+          <i class='bx bxl-twitter'></i>
+        </a>
+            </p>
+          </div>
+        </ul>
+        
+        <!--ul - 3-->
+        <ul>
+            <h3>Links</h3>
+            <p><a href="#home">Home</a></p>
+            <p><a href="#books">Livros</a></p>
+            <p><a href="#contact">Contato</a></p>
+            <p><a href="assets/pages/cadastro.html">Cadastrar</a></p>
+            <p><a href="assets/pages/login.html">Login</a></p>
+        </ul>
+
+        <!--ul - 4-->
+        <ul>
+            <h3>Me contate</h3>
+            <p>+55 81 985954049</p>
+            <p>gigipoemas@gmail.com</p>
+            <p>Brasil</p>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script src="assets/js/script.js"></script>
+</html>
