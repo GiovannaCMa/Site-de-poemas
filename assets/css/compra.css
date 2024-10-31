@@ -48,87 +48,138 @@ h3 {
 }
 
 /* Seção de Livros */
-/* Container geral dos livros */
-.books {
-  text-align: center;
-  padding: 20px;
+
+/* Estilos gerais da seção de livros */
+
+section#books h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--color-00); /* Cor do título */
+  font-weight: bold;
 }
 
-.books h2 {
-  font-size: 2rem;
-  color: var(--color-00);
-  margin-bottom: 30px;
-}
-
-/* Container geral dos livros */
-.books {
-  text-align: center;
-  padding: 20px;
-}
-
-.books h2 {
-  font-size: 2rem;
-  color: var(--color-00);
-  margin-bottom: 30px;
-}
-
-/* Container geral dos livros */
+/* Container dos livros */
 .books-container {
-  flex-direction: column;
-  align-items: center;
+  background-color: var(--color-00); /* Fundo do container dos livros */
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px var(--color-00);
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 
-.books-box {
-  background-color: var(--color-00);
-  border-radius: 10px;
-  padding: 20px;
-  width: 600px; /* Ajustar a largura do item para caber imagem e texto lado a lado */
-  box-shadow: var(--color-00);
-  transition: transform 0.3s ease;
-}
-
-.books-box:hover {
-  transform: scale(1.05);
-}
-
+/* Estilos para organizar imagem e texto lado a lado em telas grandes */
 .book-content {
   display: flex;
-  align-items: flex-start; /* Alinha a imagem e o texto no topo */
+  align-items: center;
+  gap: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
 .book-content img {
-  max-width: 150px; /* Define um tamanho máximo para a imagem */
-  margin-right: 20px; /* Espaço entre a imagem e o texto */
-  border-radius: 5px;
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
 }
 
+/* Detalhes do livro */
 .book-details {
+  max-width: 300px;
   text-align: left;
-  flex: 1; /* Faz o texto ocupar o espaço restante */
 }
 
 .book-details h3 {
-  font-size: 1.5rem;
-  margin-top: 0;
+  font-size: 1.5em;
   color: var(--text-color);
+  font-weight: bold;
+  margin-top: 0;
 }
 
 .book-details p {
-  font-size: 1rem;
+  font-size: 1em;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.book-details .preco {
+  font-size: 1.3em;
+  font-weight: bold;
   color: var(--text-color);
   margin-top: 10px;
 }
 
-.preco {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  font-weight: bold;
+.book-details .botao-comprar {
+  display: inline-block;
   margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
+
+.book-details .botao-comprar:hover {
+  background-color: #e85f7d;
+  color: #fff;
+}
+
+/* Media query para telas menores (celulares) */
+@media (max-width: 768px) {
+  .book-content {
+    display: flex;
+    flex-direction: column; /* Coloca imagem acima do texto */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .book-content img {
+    width: 150px; /* Reduz o tamanho da imagem no celular */
+  }
+  
+  .book-details {
+    max-width: 100%; /* Permite que o texto ocupe toda a largura */
+  }
+}
+
+/* Media query para telas maiores */
+@media (min-width: 992px) {
+  .books-container {
+    grid-template-columns: repeat(3, 1fr); /* Distribuição mais ampla para notebooks */
+  }
+}
+
+
+/* Media query para telas maiores */
+@media (min-width: 992px) {
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Media query para telas maiores */
+@media (min-width: 992px) {
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Media query para telas maiores */
+@media (min-width: px) {
+  .books-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 
 /* Seção de Pagamento */
 .payment-section {
@@ -182,14 +233,3 @@ h3 {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
-
-
-  /* Ajusta a exibição das caixas de livros (books) */
-  
-  .books-box {
-    .books-box {
-      width: calc(50% - 20px); /* Duas colunas em telas menores */
-    }
-}
-}
