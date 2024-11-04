@@ -1,16 +1,22 @@
-const menuhamburguer = document.querySelector(".menu-hamburguer");
-menuhamburguer.addEventListener("click", toggleMenu);
+document.addEventListener('DOMContentLoaded', function () {
+  const menuHamburguer = document.querySelector('.menu-hamburguer');
+  const navResponsive = document.querySelector('.nav-responsive');
 
-function toggleMenu() {
-  const nav = document.querySelector(".nav-responsive");
-  menuhamburguer.classList.toggle("change");
+  // Esconde o menu responsivo ao carregar a página
+  navResponsive.style.display = 'none';
 
-  if (menuhamburguer.classList.contains("change")) {
-    nav.style.display = "block";
-  } else {
-    nav.style.display = "none";
-  }
-}
+  // Alterna a visibilidade do menu ao clicar no ícone
+  menuHamburguer.addEventListener('click', function () {
+    if (navResponsive.style.display === 'none') {
+      navResponsive.style.display = 'block';
+    } else {
+      navResponsive.style.display = 'none';
+    }
+
+    // Alterna a animação das barras do menu hambúrguer
+    menuHamburguer.classList.toggle('change');
+  });
+});
 
 document
   .getElementById("contact-form")
