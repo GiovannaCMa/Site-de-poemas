@@ -82,6 +82,7 @@ header {
     color: var(--hover);
 }
 
+
 .header-hidden {
     transform: translateY(-100%); /* Move o cabeçalho para fora da tela */
 }

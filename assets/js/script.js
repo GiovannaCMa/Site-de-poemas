@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Alterna a animação das barras do menu hambúrguer
       menuHamburguer.classList.toggle('change');
     });
-  });
+});
 
 let lastScrollTop = 0;
   const header = document.querySelector('header');
@@ -76,4 +76,4 @@ let lastScrollTop = 0;
           header.classList.remove('header-hidden');
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para Mobile or negative scrolling
-  });
+});
