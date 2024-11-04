@@ -41,3 +41,39 @@ emailjs .send( 'service_qlpkx8w', 'template_pjtvf82', params)
 });
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuHamburguer = document.querySelector('.menu-hamburguer');
+    const navResponsive = document.querySelector('.nav-responsive');
+  
+    // Esconde o menu responsivo ao carregar a página
+    navResponsive.style.display = 'none';
+  
+    // Alterna a visibilidade do menu ao clicar no ícone
+    menuHamburguer.addEventListener('click', function () {
+      if (navResponsive.style.display === 'none') {
+        navResponsive.style.display = 'block';
+      } else {
+        navResponsive.style.display = 'none';
+      }
+  
+      // Alterna a animação das barras do menu hambúrguer
+      menuHamburguer.classList.toggle('change');
+    });
+  });
+
+let lastScrollTop = 0;
+  const header = document.querySelector('header');
+  
+  window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop) {
+          // Rolando para baixo
+          header.classList.add('header-hidden');
+      } else {
+          // Rolando para cima
+          header.classList.remove('header-hidden');
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para Mobile or negative scrolling
+  });

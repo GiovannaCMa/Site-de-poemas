@@ -82,6 +82,10 @@ header {
     color: var(--hover);
 }
 
+.header-hidden {
+    transform: translateY(-100%); /* Move o cabeçalho para fora da tela */
+}
+
 .logo-img {
     width: 65px;
     height: 65px;
