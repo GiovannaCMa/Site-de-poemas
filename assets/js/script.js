@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Alterna a visibilidade do menu ao clicar no ícone
   menuHamburguer.addEventListener('click', function () {
-    if (navResponsive.style.display === 'none') {
+    if (navResponsive.style.display === 'none') { 
       navResponsive.style.display = 'block';
     } else {
       navResponsive.style.display = 'none';
