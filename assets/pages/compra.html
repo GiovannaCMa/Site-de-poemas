@@ -13,7 +13,10 @@
         <!-- Produto 1 -->
         <div class="books-box">
           <div class="book-content">
-            <img src="../img/capa (1).jpg" alt="capa-1" />
+            <img
+              src="../img/capa (1).jpg"
+              alt="Capa do livro Poemas de Gigi - Os amores"
+            />
             <div class="book-details">
               <h3>Poemas de Gigi - Os amores</h3>
               <p>
@@ -31,14 +34,10 @@
 
     <section class="payment-section">
       <h2>Formas de Pagamento</h2>
-      <p>
-        Você sairá da página, quando pagar é só voltar para cá e continuar a
-        compra.
-      </p>
-
+      <p>Você sairá da página. Após pagar, retorne e continue a compra.</p>
       <div class="payment-option">
         <a
-          href="https://nubank.com.br/cobrar/16jzbo/671940a9-aece-4fb7-8899-156253275cb6 "
+          href="https://nubank.com.br/cobrar/16jzbo/671940a9-aece-4fb7-8899-156253275cb6"
           target="_blank"
         >
           <button id="payCard">Pagar PIX</button>
@@ -48,26 +47,20 @@
 
     <section class="payment-section">
       <h2>Coloque o comprovante aqui</h2>
-
-      <form id="contact-form">
-        <input type="email" id="email" name="email" placeholder="Email para enviar o e-book" required />
-        <input type="file" id="file-upload" name="file" required />
-        <a href="../pages/comprafeita.html">
-          <button type="submit">Enviar</button>
-        </a>
-      </form>
+    
+      <button  formsappId="674d1857d6e56b6c73c3172f"></button>
       <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("h0APax4EhGv-0blgo"); 
-      })();
-    </script>
-  </section>
-      
-    </section>
+        src="https://forms.app/static/embed.js"
+        type="text/javascript"
+        async
+        defer
+        onload="new formsapp('674d1857d6e56b6c73c3172f', 'popup', {'button':{'color':'#ff859f','text':'Clique aqui!'},'width':'400px','height':'700px','openingAnimation':{'entrance':'animate_fadeIn','exit':'animate_fadeOut'}}, 'https://c65g8zlm.forms.app');"
+      ></script>
+ 
+        </section>
+
+    
+
     <script src="../js/compra.js"></script>
   </body>
 </html>

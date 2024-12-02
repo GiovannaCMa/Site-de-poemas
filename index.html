@@ -9,13 +9,13 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <header>
       <a>
         <div class="logo-img">
-          <img src="assets/img/logo.jpeg" />
+          <img src="../img/logo.jpeg" />
         </div>
       </a>
 
@@ -23,16 +23,14 @@
         <a href="#home">Home</a>
         <a href="#books">Livros</a>
         <a href="#contact">Contato</a>
-        <a href="assets/pages/cadastro.html">Cadastrar</a>
-        <a href="assets/pages/login.html">Login</a>
+        <a href="#">Eu</a>
       </div>
 
       <div class="nav-responsive">
         <a href="#home">Home</a>
         <a href="#books">Livros</a>
         <a href="#contact">Contato</a>
-        <a href="assets/pages/cadastro.html">Cadastrar</a>
-        <a href="assets/pages/login.html">Login</a>
+        <a href="#">Eu</a>
       </div>
 
       <div class="menu-hamburguer">
@@ -42,8 +40,8 @@
       </div>
     </header>
 
-     <!--HOME SECTION-->
-     <section class="home" id="home">
+    <!--HOME SECTION-->
+    <section class="home" id="home">
       <div class="home-container">
         <h1>Bem vindo(a)!</h1>
         <p>
@@ -64,19 +62,19 @@
       <div class="books-container">
         <!-- Produto 1 -->
         <div class="books-box">
-          <img src="assets/img/capa (1).jpg" alt="capa-1" />
+          <img src="../img/capa (1).jpg" alt="capa-1" />
           <h3>Poemas de Gigi - Os amores</h3>
-          <p>
-            "Poemas de Gigi - Os amores" é uma coleção de poemas escritos por       
+          <p> 
+            "Poemas de Gigi - Os amores" é uma coleção de poemas escritos por
             Giovanna Marchesin. A obra aborda temas de amor, paixão, e emoções
-            intensas, especialmente relacionadas a experiências pessoais
+            intensas, especialmente relacionadas a experiências pessoais e
             sentimentos por uma pessoa específica. Os poemas exploram as nuances
             do amor, desde o surgimento de sentimentos até as dificuldades de
             lidar com um amor não correspondido, ou com amizades que se
             transformam em algo mais.
           </p>
           <p class="preco">R$ 20,00</p>
-          <a href="assets/pages/login1.html">
+          <a href="compra.html">
             <button class="comprar-btn">Comprar</button>
           </a>
         </div>
@@ -87,40 +85,12 @@
     <section class="contact" id="contact">
       <h2>Contate<span>Me!</span></h2>
 
-      <form id="contact-form">
-        <div class="input-box">
-          <input type="text" id="name" placeholder="Seu nome" required/>
-          <input type="email" id="email" placeholder="E-mail" required/>
-        </div>
-
-        <div class="input-box">
-          <input type="tel" id="phone" placeholder="Telefone" required/>
-          <input type="text" id="tema" placeholder="Tema do poema" required/>
-        </div>
-
-        <textarea
-          cols="30"
-          rows="10"
-          id="historia"
-          placeholder="Conte um pouco sobre a história..."
-          required></textarea>
-
+      <iframe id="" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" 
+      src="https://c65g8zlm.forms.app/form/674d1dd5d6e56bf6a5c31cb5" frameborder="0" 
+      style="width: 100px; min-width:100%; height:500px; border:none;"></iframe>
         <p>
             Irei entrar em contato até 1 dia útil para informar o preço e confirmar o pedido!
-        </p>
-
-        <button type="submit" class="btn">Enviar Mensagem</button>
-      </form>
-
-      <script
-        type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-      ></script>
-      <script type="text/javascript">
-        (function () {
-          emailjs.init("h0APax4EhGv-0blgo"); 
-        })();
-      </script>
+        </p>            
     </section>
 
     <footer>
@@ -158,8 +128,8 @@
             <p><a href="#home">Home</a></p>
             <p><a href="#books">Livros</a></p>
             <p><a href="#contact">Contato</a></p>
-            <p><a href="assets/pages/cadastro.html">Cadastrar</a></p>
-            <p><a href="assets/pages/login.html">Login</a></p>
+            <p><a href="#cadastrar">Cadastrar</a></p>
+            <p><a href="#login">Login</a></p>
         </ul>
 
         <!--ul - 4-->
@@ -172,5 +142,5 @@
       </div>
     </footer>
   </body>
-  <script src="assets/js/script.js"></script>
+  <script src="../js/script.js"></script>
 </html>
