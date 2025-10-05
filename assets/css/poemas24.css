@@ -1,0 +1,338 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Cores e Variáveis Globais */
+:root {
+    --text-color: #000000b2;
+    --body: #E6E6FA;
+    --hover: #e8919d;
+    --inicio-fim: #ffcccc;
+    --color-00: #ff859f;
+    --color-01: #ffff;
+    --color-02: #e8919d;
+}
+
+/* Reset e Configurações Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body);
+    color: var(--text-color);
+    margin: 0;
+    padding-top: 4rem; /* Compensa a altura do header fixo */
+}
+
+/* Estilo do Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: var(--inicio-fim);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    border: solid 1px var(--inicio-fim);
+}
+
+/* Navegação Responsiva */
+.nav-responsive {
+    display: none; /* Oculto por padrão */
+    position: absolute;
+    justify-content: space-around;
+    padding: 10px;
+    position: absolute;
+    top: 5px; /* Aparece abaixo do header */
+    left: 50px;
+    width: 100%;
+    background-color: var(--inicio-fim);
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Links da Navegação */
+.nav a, .nav-responsive a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover, .nav-responsive a:hover {
+    color: var(--hover);
+}
+
+/* Estilo para quando o cabeçalho está escondido */
+.header-hidden {
+    transform: translateY(-100%); /* Move o cabeçalho para fora da tela */
+  }
+
+/* Estilo do Menu Hamburguer */
+.menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: var(--color-01);
+    margin: 0.4rem 0rem;
+    transition: 0.3s ease;
+}
+
+/* Animação de Transformação do Menu Hamburguer */
+.change .bar1 {
+    transform:  rotate(-45deg);
+}
+
+.change .bar2 {
+    transform: rotate(-45deg);
+}
+
+.change .bar3 {
+    transform: rotate(-45deg);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin: 100px 0 30px;
+}
+
+h3 {
+    text-align: center;
+    color: var(--color-02);
+    margin: 10px 0 50px;
+}
+
+h4 {
+    text-align: center;
+    color: var(--text-color);
+    margin: 10px 0 50px;
+}
+
+/* Layout de Grade para Poemas */
+.poems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px;
+}
+
+/* Estilo de Cada Poema */
+.poem, .poema, .poeml, .poemaa, .poemav {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poem {
+    background-color: var(--color-00);
+    border: 1px solid var(--color-00);
+}
+
+.poema {
+    background-color: #a9a9a9;
+    border: 1px solid #a9a9a9;
+}
+
+.poeml {
+    background-color: #FF6400;
+    border: 1px solid #FF6400;
+}
+
+.poemaa {
+    background-color: #4eafcf;
+    border: 1px solid #4eafcf;
+}
+
+.poemav {
+    background-color: #FF0000		;
+    border: 1px solid #FF0000		;
+}
+
+
+
+/* Título do Poema */
+.poem-title {
+    color: var(--text-color);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Conteúdo dos Versos */
+.poem-content {
+    display: grid;
+    gap: 10px;
+}
+
+/* Caixa de Cada Verso */
+.verse-box {
+    background-color: #f1f8ff;
+    padding: 15px;
+    border: 1px solid #cce4ff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.pagination li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-00);
+    color: var(--color-01);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination li a:hover {
+    background-color: var(--hover);
+    color: var(--color-01);
+}
+
+.pagination li a.current-page {
+    background-color: var(--inicio-fim);
+    color: var(--text-color);
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* Estilo da Navegação */
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0; /* Espaçamento superior e inferior */
+    background-color: var(--inicio-fim); 
+}
+
+.navigation li {
+    list-style: none; /* Remove os marcadores pa/* Estilo da Navegação */
+}    
+    
+.navigation a {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: var(--text-color); /* Cor do texto */
+    padding: 0.75rem 1.5rem; /* Espaçamento interno do link */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+    
+
+.navigation a {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: var(--text-color); /* Cor do texto */
+    padding: 0.75rem 1.5rem; /* Espaçamento interno do link */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+
+
+
+
+
+/*extra small*/
+@media (max-width: 700px) {
+    .menu-hamburguer {
+        display:block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    .poems-grid {
+        grid-template-columns: repeat(1, 1fr); /* Duas colunas */
+    }
+}
+
+
+/* Medium: Tablet */
+@media (min-width: 701px) {
+    .poems-grid {
+        grid-template-columns: repeat(1, 1fr); /* Duas colunas */
+    }
+
+    .menu-hamburguer {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav-responsive, .nav-responsive a {
+        display: none;
+    }
+
+    body {
+        font-size: 110%; 
+    }
+}
+
+/* Large: Notebook */
+@media (min-width: 801px) {
+    .poems-grid {
+        grid-template-columns: repeat(1, 1fr); /* Duas colunas */
+    }
+
+    body {
+        font-size: 115%;
+    }
+}
+
+@media (min-width: 900px) {
+    .poems-grid {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    }
+}
+
+@media (min-width: 1299px) {
+    .poems-grid {
+        grid-template-columns: repeat(3, 1fr); /* Duas colunas */
+    }
+}
+
